@@ -12,14 +12,13 @@
 import type { NextRequest } from "next/server";
 
 import {
-  DEFAULT_PAGE_SIZE,
   FOOD_API_BASE_URL,
   FOOD_API_SUCCESS_CODE,
-  FOOD_API_TIMEOUT_MS,
-  FOOD_LV3_SNACK_CODE,
-  MAX_PAGE_SIZE,
-} from "@/shared/constants";
-import type { FoodApiRawResponse, FoodNutritionResponse } from "@/shared/types";
+  FOOD_LV3_SNACK_CATEGORY_CODE,
+  type FoodApiRawResponse,
+  type FoodNutritionResponse,
+} from "@/entities/snack";
+import { DEFAULT_API_TIMEOUT_MS, DEFAULT_PAGE_SIZE, MAX_PAGE_SIZE } from "@/shared/constants";
 
 /** 요청 파라미터의 유효성을 검사하고 정규화된 값을 반환합니다 */
 function parseSearchParams(searchParams: URLSearchParams): {
@@ -67,7 +66,7 @@ export async function GET(request: NextRequest): Promise<Response> {
    */
   const url = new URL(FOOD_API_BASE_URL);
   url.searchParams.set("serviceKey", apiKey);
-  url.searchParams.set("foodLv3Cd", FOOD_LV3_SNACK_CODE);
+  url.searchParams.set("foodLv3Cd", FOOD_LV3_SNACK_CATEGORY_CODE);
   url.searchParams.set("pageNo", String(pageNo));
   url.searchParams.set("numOfRows", String(numOfRows));
   url.searchParams.set("type", "json");
@@ -80,7 +79,7 @@ export async function GET(request: NextRequest): Promise<Response> {
 
   try {
     const externalRes = await fetch(requestUrl, {
-      signal: AbortSignal.timeout(FOOD_API_TIMEOUT_MS),
+      signal: AbortSignal.timeout(DEFAULT_API_TIMEOUT_MS),
     });
 
     if (!externalRes.ok) {
