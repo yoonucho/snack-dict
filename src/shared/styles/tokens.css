@@ -1,0 +1,32 @@
+:root {
+  --snack-color-gray-10: #f7f5f5;
+  --snack-color-gray-20: #edebeb;
+  --snack-color-gray-30: #d9d7d7;
+  --snack-color-gray-40: #bdbbbb;
+  --snack-color-gray-50: #999493;
+  --snack-color-gray-70: #5c5554;
+  --snack-color-gray-90: #2e1515;
+
+  --snack-color-system-error: #ff3b30;
+  --snack-color-system-normal: #007aff;
+
+  --snack-color-category-chocolate: #ff7474;
+  --snack-color-category-chocolate-text: #b32828;
+  --snack-color-category-pie: #f6e33b;
+  --snack-color-category-pie-text: #9d8a00;
+  --snack-color-category-biscuit: #37e44e;
+  --snack-color-category-biscuit-text: #008b00;
+  --snack-color-category-bag: #55bbff;
+  --snack-color-category-bag-text: #096fb3;
+  --snack-color-category-candy-gum: #a477ff;
+  --snack-color-category-candy-gum-text: #6437bf;
+  --snack-color-category-jelly: #ff8ee7;
+  --snack-color-category-jelly-text: #b3429b;
+
+  --snack-color-taste-sweet: #ff64a7;
+  --snack-color-taste-sour: #56c110;
+  --snack-color-taste-salty: #00accf;
+  --snack-color-taste-spicy: #e62626;
+  --snack-color-taste-bitter: #622616;
+  --snack-color-taste-rich: #c0a000;
+}

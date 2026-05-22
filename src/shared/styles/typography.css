@@ -1,0 +1,44 @@
+:root {
+  --snack-font-family-sans: "Pretendard", var(--font-sans);
+
+  --snack-font-weight-regular: 400;
+  --snack-font-weight-medium: 500;
+  --snack-font-weight-semibold: 600;
+  --snack-font-weight-bold: 700;
+
+  --snack-text-caption-size: 0.6875rem;
+  --snack-text-caption-line-height: 145%;
+  --snack-text-caption-letter-spacing: 0%;
+
+  --snack-text-micro-size: 0.8125rem;
+  --snack-text-micro-line-height: 140%;
+  --snack-text-micro-letter-spacing: -0.2%;
+
+  --snack-text-body-xs-size: 0.875rem;
+  --snack-text-body-xs-line-height: 145%;
+  --snack-text-body-xs-letter-spacing: -0.5%;
+
+  --snack-text-body-sm-size: 0.9375rem;
+  --snack-text-body-sm-line-height: 140%;
+  --snack-text-body-sm-letter-spacing: -1%;
+
+  --snack-text-body-md-size: 1.0625rem;
+  --snack-text-body-md-line-height: 140%;
+  --snack-text-body-md-letter-spacing: -1%;
+
+  --snack-text-title-sm-size: 1.25rem;
+  --snack-text-title-sm-line-height: 130%;
+  --snack-text-title-sm-letter-spacing: -0.5%;
+
+  --snack-text-title-md-size: 1.5rem;
+  --snack-text-title-md-line-height: 130%;
+  --snack-text-title-md-letter-spacing: -0.5%;
+
+  --snack-text-title-lg-size: 1.75rem;
+  --snack-text-title-lg-line-height: 130%;
+  --snack-text-title-lg-letter-spacing: -0.5%;
+
+  --snack-text-title-xl-size: 2rem;
+  --snack-text-title-xl-line-height: 130%;
+  --snack-text-title-xl-letter-spacing: -0.5%;
+}
