@@ -1,5 +1,5 @@
 :root {
-  --snack-font-family-sans: "Pretendard", var(--font-sans);
+  --snack-font-family-sans: var(--font-pretendard);
 
   --snack-font-weight-regular: 400;
   --snack-font-weight-medium: 500;
@@ -25,6 +25,10 @@
   --snack-text-body-md-size: 1.0625rem;
   --snack-text-body-md-line-height: 140%;
   --snack-text-body-md-letter-spacing: -1%;
+
+  --snack-text-button-size: 1.0625rem;
+  --snack-text-button-line-height: 140%;
+  --snack-text-button-letter-spacing: -1px;
 
   --snack-text-title-sm-size: 1.25rem;
   --snack-text-title-sm-line-height: 130%;

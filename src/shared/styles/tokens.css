@@ -1,4 +1,6 @@
 :root {
+  --snack-color-white: #ffffff;
+
   --snack-color-gray-10: #f7f5f5;
   --snack-color-gray-20: #edebeb;
   --snack-color-gray-30: #d9d7d7;
@@ -29,4 +31,23 @@
   --snack-color-taste-spicy: #e62626;
   --snack-color-taste-bitter: #622616;
   --snack-color-taste-rich: #c0a000;
+
+  --snack-button-radius: 0;
+  --snack-button-height-sm: 2.25rem;
+  --snack-button-height-md: 2.75rem;
+  --snack-button-height-lg: 3.25rem;
+  --snack-button-size-icon: 2.75rem;
+  --snack-button-min-width-full: 21.5rem;
+  --snack-button-action-group-max-width: 21.5rem;
+  --snack-button-padding-inline-sm: 0.875rem;
+  --snack-button-padding-inline-md: 1.25rem;
+  --snack-button-padding-inline-lg: 1.5rem;
+  --snack-button-gap-sm: 0.375rem;
+  --snack-button-gap-md: 0.5rem;
+  --snack-button-gap-lg: 0.625rem;
+  --snack-button-action-group-gap-single: 0.75rem;
+  --snack-button-action-group-gap-dual: 0.5rem;
+  --snack-button-icon-sm: 1rem;
+  --snack-button-icon-md: 1.25rem;
+  --snack-button-icon-lg: 1.5rem;
 }
