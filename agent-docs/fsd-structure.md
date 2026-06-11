@@ -82,7 +82,7 @@ export type { Message } from './types';
 
 ### 5. UI 컴포넌트 배치
 
-기본 UI primitive와 제품 커스텀 UI를 분리한다.
+기본 UI primitive와 Snack Dict 전용 커스텀 UI를 분리한다.
 
 #### `src/shared/ui/base/`
 
@@ -102,12 +102,12 @@ import { cn } from '@/shared/lib/utils';
 #### `src/shared/ui/snack/[component]/`
 
 - 여러 화면에서 재사용되는 Snack Dict 디자인 시스템 컴포넌트를 배치한다.
-- `shared/ui/base` 컴포넌트를 조합하거나 확장해 제품 스타일과 variant를 정의한다.
+- `shared/ui/base` 컴포넌트를 조합하거나 확장해 Snack Dict 디자인 시스템 스타일과 variant를 정의한다.
 - 컴포넌트 파일, CSS Modules, Storybook, 테스트, 프롬프트 문서는 같은 폴더에 함께 둔다.
 - 외부에서 사용할 API는 해당 폴더의 `index.ts`에서 명시적으로 export한다.
 
 ```typescript
-// ✓ snack button은 base button을 감싼 제품 커스텀 컴포넌트
+// ✓ snack button은 base button을 감싼 Snack Dict 전용 컴포넌트
 import { Button } from '@/shared/ui/base/button';
 ```
 

@@ -8,7 +8,7 @@
 
 - Tailwind CSS는 구조적 스타일을 빠르게 조립하는 용도로 사용
 - shadcn/ui 컴포넌트를 접근성 있는 UI 빌딩 블록으로 활용
-- CSS Modules는 제품 컴포넌트의 세밀한 표현 스타일에 사용
+- CSS Modules는 Snack Dict 디자인 시스템 컴포넌트의 세밀한 표현 스타일에 사용
 - 인라인 스타일(`style={{}}`) 사용 최소화
 - 매직 넘버 지양 → Tailwind 디자인 토큰 및 CSS 커스텀 프로퍼티 활용
 
@@ -28,18 +28,18 @@ Tailwind CSS, shadcn/ui, CSS Modules는 함께 사용하되 같은 스타일 속
 
 ### CSS Modules가 담당하는 영역
 
-- 제품 컴포넌트의 브랜드 색상, 배경, border, shadow
+- Snack Dict 디자인 시스템 컴포넌트의 브랜드 색상, 배경, border, shadow
 - hover, focus, pressed, selected 같은 세밀한 상태 스타일
 - 내부 요소 selector: `.button svg`, `.item[data-active='true']`
 - 복잡한 컴포넌트 variant
-- `--snack-*` CSS 변수 기반의 제품 스타일
+- `--snack-*` CSS 변수 기반의 Snack Dict 디자인 시스템 스타일
 - 컴포넌트 CSS Module의 기본 클래스는 `.root`가 아니라 파일명 또는 역할명으로 작성
 
 ### shadcn/ui가 담당하는 영역
 
 - Radix UI 기반의 접근성, 키보드 인터랙션, primitive 동작
 - `shared/ui/base`의 낮은 수준 UI building block
-- 제품 스타일이 필요한 경우 base 컴포넌트를 직접 덮어쓰기보다 `shared/ui/snack/*`에서 감싸서 확장
+- Snack Dict 디자인 시스템 스타일이 필요한 경우 base 컴포넌트를 직접 덮어쓰기보다 `shared/ui/snack/*`에서 감싸서 확장
 
 ```tsx
 // ✓ 구조는 Tailwind로 조립
@@ -49,7 +49,7 @@ Tailwind CSS, shadcn/ui, CSS Modules는 함께 사용하되 같은 스타일 속
 ```
 
 ```css
-/* ✓ 제품 버튼의 세밀한 표현은 CSS Modules로 관리 */
+/* ✓ Snack Dict 버튼의 세밀한 표현은 CSS Modules로 관리 */
 .primary {
   background: var(--snack-color-gray-90);
   color: #ffffff;
