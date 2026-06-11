@@ -3,7 +3,7 @@
 import { type ReactNode } from "react";
 
 import { QueryProvider } from "@/shared/providers/query-provider";
-import { Toaster } from "@/shared/ui/sonner";
+import { Toaster } from "@/shared/ui/base/sonner";
 
 interface ProvidersProps {
   children: ReactNode;
