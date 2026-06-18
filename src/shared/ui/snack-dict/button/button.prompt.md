@@ -2,9 +2,9 @@
 
 ## 역할
 
-`SnackButton`은 Snack Dict 화면에서 사용하는 액션 버튼이다. shadcn/Radix 기반 `Button`을 직접 Snack Dict 디자인 시스템 스타일로 덮어쓰지 않고, base `Button`을 감싼 Snack Dict 전용 컴포넌트로 관리한다.
+`SnackDictButton`은 Snack Dict 화면에서 사용하는 액션 버튼이다. shadcn/Radix 기반 `Button`을 직접 Snack Dict 디자인 시스템 스타일로 덮어쓰지 않고, base `Button`을 감싼 Snack Dict 전용 컴포넌트로 관리한다.
 
-폴더명은 `snack/button`처럼 역할명을 사용하고, 컴포넌트명은 base `Button`과 구분하기 위해 `SnackButton`을 사용한다.
+폴더명은 `snack-dict/button`처럼 역할명을 사용하고, 컴포넌트명은 base `Button`과 구분하기 위해 `SnackDictButton`을 사용한다.
 
 ## 기준 문서
 
@@ -33,20 +33,20 @@
 
 ## 네이밍 규칙
 
-- 기본 Snack Dict 버튼은 `snack/button`의 `SnackButton`으로 관리한다.
+- 기본 Snack Dict 버튼은 `snack-dict/button`의 `SnackDictButton`으로 관리한다.
 - 버튼의 시각적 차이는 액션 버튼에 필요한 `variant`와 `size`로 표현한다.
-- 단일/이중 주요 액션 배치는 `SnackActionGroup`이 담당한다.
+- 단일/이중 주요 액션 배치는 `SnackDictActionGroup`이 담당한다.
 - 마크업, 접근성 역할, 상호작용 의미가 버튼과 달라지면 별도 컴포넌트로 분리한다.
 
 ## 구현 규칙
 
 - `src/shared/ui/button.tsx`의 base `Button`을 내부에서 사용한다.
 - Snack Dict 디자인 시스템 스타일은 컴포넌트와 같은 폴더의 `button.module.css`에서 관리한다.
-- 색상과 타이포그래피는 CSS Module 안에서 `--snack-*` CSS 변수만 사용한다.
+- 색상과 타이포그래피는 CSS Module 안에서 `--snack-dict-*` CSS 변수만 사용한다.
 - 임의 hex 색상, 임의 폰트 크기, 임의 letter-spacing을 추가하지 않는다.
-- Snack Dict 화면에 필요한 variant만 `SnackButton`에 둔다.
+- Snack Dict 화면에 필요한 variant만 `SnackDictButton`에 둔다.
 - feature나 widget에 종속된 문구, 데이터, 비즈니스 상태는 props로 주입한다.
-- `SnackActionGroup`은 레이아웃만 담당하고, 버튼의 의미와 시각 variant는 children의 `SnackButton`이 담당한다.
+- `SnackDictActionGroup`은 레이아웃만 담당하고, 버튼의 의미와 시각 variant는 children의 `SnackDictButton`이 담당한다.
 
 ## Variant
 

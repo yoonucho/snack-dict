@@ -25,7 +25,7 @@ src/
 ├── shared/           # 공용 유틸, 상수, 타입, UI
 │   ├── ui/           # 공용 UI 컴포넌트
 │   │   ├── base/     # Radix/shadcn 기반 primitive wrapper
-│   │   └── snack/    # Snack Dict 디자인 시스템 커스텀 컴포넌트
+│   │   └── snack-dict/ # Snack Dict 디자인 시스템 커스텀 컴포넌트
 │   ├── hooks/        # 공용 커스텀 훅
 │   ├── lib/          # 외부 라이브러리 래퍼 (supabase client 등)
 │   ├── constants/    # 상수 정의
@@ -99,7 +99,7 @@ import { Slot } from 'radix-ui';
 import { cn } from '@/shared/lib/utils';
 ```
 
-#### `src/shared/ui/snack/[component]/`
+#### `src/shared/ui/snack-dict/[component]/`
 
 - 여러 화면에서 재사용되는 Snack Dict 디자인 시스템 컴포넌트를 배치한다.
 - `shared/ui/base` 컴포넌트를 조합하거나 확장해 Snack Dict 디자인 시스템 스타일과 variant를 정의한다.
@@ -107,7 +107,7 @@ import { cn } from '@/shared/lib/utils';
 - 외부에서 사용할 API는 해당 폴더의 `index.ts`에서 명시적으로 export한다.
 
 ```typescript
-// ✓ snack button은 base button을 감싼 Snack Dict 전용 컴포넌트
+// ✓ snack-dict button은 base button을 감싼 Snack Dict 전용 컴포넌트
 import { Button } from '@/shared/ui/base/button';
 ```
 

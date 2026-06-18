@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite"
 import { Search } from "lucide-react"
 import { useState } from "react"
 
-import { SnackActionGroup, SnackButton, SnackMoreButton } from "./button"
+import { SnackDictActionGroup, SnackDictButton, SnackDictMoreButton } from "./button"
 
 const variants = ["primary", "secondary"] as const
 const sizes = ["sm", "md", "lg", "icon"] as const
@@ -17,7 +17,7 @@ const moreButtonDemoItems = [
   "빈츠",
 ] as const
 
-function SnackMoreButtonListDemo() {
+function SnackDictMoreButtonListDemo() {
   const [visibleCount, setVisibleCount] = useState(4)
   const visibleItems = moreButtonDemoItems.slice(0, visibleCount)
   const hasMore = visibleCount < moreButtonDemoItems.length
@@ -36,7 +36,7 @@ function SnackMoreButtonListDemo() {
         ))}
       </ul>
       {hasMore ? (
-        <SnackMoreButton
+        <SnackDictMoreButton
           onClick={() => {
             setVisibleCount((currentCount) =>
               Math.min(currentCount + 4, moreButtonDemoItems.length)
@@ -53,8 +53,8 @@ function SnackMoreButtonListDemo() {
 }
 
 const meta = {
-  title: "Shared/UI/Snack/Button",
-  component: SnackButton,
+  title: "Shared/UI/SnackDict/Button",
+  component: SnackDictButton,
   parameters: {
     layout: "centered",
   },
@@ -75,7 +75,7 @@ const meta = {
   args: {
     children: "확인",
   },
-} satisfies Meta<typeof SnackButton>
+} satisfies Meta<typeof SnackDictButton>
 
 export default meta
 
@@ -92,8 +92,8 @@ export const Default: Story = {
 export const Variants: Story = {
   render: () => (
     <div className="flex flex-wrap items-center gap-3">
-      <SnackButton variant="primary">확인</SnackButton>
-      <SnackButton variant="secondary">초기화</SnackButton>
+      <SnackDictButton variant="primary">확인</SnackDictButton>
+      <SnackDictButton variant="secondary">초기화</SnackDictButton>
     </div>
   ),
 }
@@ -102,9 +102,9 @@ export const Sizes: Story = {
   render: () => (
     <div className="flex flex-wrap items-center gap-3">
       {sizes.map((size) => (
-        <SnackButton key={size} size={size} aria-label={size === "icon" ? "검색" : undefined}>
+        <SnackDictButton key={size} size={size} aria-label={size === "icon" ? "검색" : undefined}>
           {size === "icon" ? <Search /> : `${size} 버튼`}
-        </SnackButton>
+        </SnackDictButton>
       ))}
     </div>
   ),
@@ -113,11 +113,11 @@ export const Sizes: Story = {
 export const States: Story = {
   render: () => (
     <div className="flex flex-wrap items-center gap-3">
-      <SnackButton>기본</SnackButton>
-      <SnackButton disabled>비활성</SnackButton>
-      <SnackButton variant="secondary" disabled>
+      <SnackDictButton>기본</SnackDictButton>
+      <SnackDictButton disabled>비활성</SnackDictButton>
+      <SnackDictButton variant="secondary" disabled>
         초기화 불가
-      </SnackButton>
+      </SnackDictButton>
     </div>
   ),
 }
@@ -133,11 +133,11 @@ export const Icon: Story = {
 
 export const SingleAction: Story = {
   render: () => (
-    <SnackActionGroup mode="single" aria-label="단일 액션 버튼 예시">
-      <SnackButton fullWidth variant="primary" size="lg">
+    <SnackDictActionGroup mode="single" aria-label="단일 액션 버튼 예시">
+      <SnackDictButton fullWidth variant="primary" size="lg">
         선택 완료
-      </SnackButton>
-    </SnackActionGroup>
+      </SnackDictButton>
+    </SnackDictActionGroup>
   ),
   parameters: {
     controls: {
@@ -148,14 +148,14 @@ export const SingleAction: Story = {
 
 export const DualAction: Story = {
   render: () => (
-    <SnackActionGroup mode="dual" aria-label="이중 액션 버튼 예시">
-      <SnackButton fullWidth variant="secondary" size="lg">
+    <SnackDictActionGroup mode="dual" aria-label="이중 액션 버튼 예시">
+      <SnackDictButton fullWidth variant="secondary" size="lg">
         취소
-      </SnackButton>
-      <SnackButton fullWidth variant="primary" size="lg">
+      </SnackDictButton>
+      <SnackDictButton fullWidth variant="primary" size="lg">
         저장
-      </SnackButton>
-    </SnackActionGroup>
+      </SnackDictButton>
+    </SnackDictActionGroup>
   ),
   parameters: {
     controls: {
@@ -165,7 +165,7 @@ export const DualAction: Story = {
 }
 
 export const MoreButton: Story = {
-  render: () => <SnackMoreButton />,
+  render: () => <SnackDictMoreButton />,
   parameters: {
     controls: {
       disable: true,
@@ -174,7 +174,7 @@ export const MoreButton: Story = {
 }
 
 export const WithListExpansion: Story = {
-  render: () => <SnackMoreButtonListDemo />,
+  render: () => <SnackDictMoreButtonListDemo />,
   parameters: {
     controls: {
       disable: true,

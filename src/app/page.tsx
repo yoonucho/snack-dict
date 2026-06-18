@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { SnackActionGroup, SnackButton } from "@/shared/ui/snack/button";
+import { SnackDictActionGroup, SnackDictButton } from "@/shared/ui/snack-dict/button";
 
 export default function Home() {
   return (
@@ -36,14 +36,14 @@ export default function Home() {
             center.
           </p>
         </div>
-        <SnackActionGroup mode="dual" aria-label="홈 주요 액션">
-          <SnackButton fullWidth variant="secondary" size="lg">
+        <SnackDictActionGroup mode="dual" aria-label="홈 주요 액션">
+          <SnackDictButton fullWidth variant="secondary" size="lg">
             오늘의 스낵 보기
-          </SnackButton>
-          <SnackButton fullWidth variant="primary" size="lg">
+          </SnackDictButton>
+          <SnackDictButton fullWidth variant="primary" size="lg">
             단어 추가하기
-          </SnackButton>
-        </SnackActionGroup>
+          </SnackDictButton>
+        </SnackDictActionGroup>
       </main>
     </div>
   );

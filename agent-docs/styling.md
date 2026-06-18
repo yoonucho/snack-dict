@@ -32,31 +32,31 @@ Tailwind CSS, shadcn/ui, CSS Modules는 함께 사용하되 같은 스타일 속
 - hover, focus, pressed, selected 같은 세밀한 상태 스타일
 - 내부 요소 selector: `.button svg`, `.item[data-active='true']`
 - 복잡한 컴포넌트 variant
-- `--snack-*` CSS 변수 기반의 Snack Dict 디자인 시스템 스타일
+- `--snack-dict-*` CSS 변수 기반의 Snack Dict 디자인 시스템 스타일
 - 컴포넌트 CSS Module의 기본 클래스는 `.root`가 아니라 파일명 또는 역할명으로 작성
 
 ### shadcn/ui가 담당하는 영역
 
 - Radix UI 기반의 접근성, 키보드 인터랙션, primitive 동작
 - `shared/ui/base`의 낮은 수준 UI building block
-- Snack Dict 디자인 시스템 스타일이 필요한 경우 base 컴포넌트를 직접 덮어쓰기보다 `shared/ui/snack/*`에서 감싸서 확장
+- Snack Dict 디자인 시스템 스타일이 필요한 경우 base 컴포넌트를 직접 덮어쓰기보다 `shared/ui/snack-dict/*`에서 감싸서 확장
 
 ```tsx
 // ✓ 구조는 Tailwind로 조립
 <section className="flex flex-col gap-4 p-4 md:grid md:grid-cols-2">
-  <SnackButton variant="primary">저장</SnackButton>
+  <SnackDictButton variant="primary">저장</SnackDictButton>
 </section>
 ```
 
 ```css
 /* ✓ Snack Dict 버튼의 세밀한 표현은 CSS Modules로 관리 */
 .primary {
-  background: var(--snack-color-gray-90);
+  background: var(--snack-dict-color-gray-90);
   color: #ffffff;
 }
 
 .primary:hover {
-  background: var(--snack-color-gray-70);
+  background: var(--snack-dict-color-gray-70);
 }
 ```
 
@@ -130,7 +130,7 @@ const buttonClass = twMerge(
 ### 컴포넌트 활용
 
 - 기본 UI 요소(Button, Input, Dialog 등)는 shadcn/ui 컴포넌트를 우선 사용
-- 커스터마이징이 필요하면 shadcn/ui 컴포넌트를 `shared/ui/snack/*`에서 확장하여 사용
+- 커스터마이징이 필요하면 shadcn/ui 컴포넌트를 `shared/ui/snack-dict/*`에서 확장하여 사용
 - 직접 구현하기 전에 shadcn/ui에 해당 컴포넌트가 있는지 먼저 확인
 
 ### 변형(Variants) 활용
